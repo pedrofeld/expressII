@@ -12,6 +12,7 @@ app.use(express.json())
 
 //------------------------
 
+let port = 8080
 let carros = []   //Criamos um array que armazenará os veículos
 let pessoas = [] //Criamos um array que armazene as pessoas usuarias
 let proximoId = 1  // Criamos uma variável que vai automatizar a criação dos ids
@@ -283,4 +284,4 @@ app.post('/login', async (request, response) => {
 //-------------------- VERIFICAR API  -------------------------
 
 
-app.listen(8080, () => console.log("Servidor iniciado na porta 8080"))
+app.listen(port, () => console.log("Servidor iniciado na porta 8080"))
