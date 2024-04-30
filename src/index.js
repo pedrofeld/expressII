@@ -111,9 +111,7 @@ app.get('/carros', (request, response) => {
     const dadosMapeados = carros.map((carro) => `Carro: ${carro.modeloDocarro} - Marca: ${carro.marcaCarro} -  Cor : ${carro.corDoCarro} - Preço: ${carro.precoDoCarro}`)
   
     // Envia uma responseposta de status 200 (OK) com a lista de informações dos carros. Captamos os dados que foram mapeados e tratados
-    response.status(200).send({
-      carros: dadosMapeados,
-    })
+    response.status(200).send({dadosMapeados})
 })
 
 
